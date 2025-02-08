@@ -6,6 +6,7 @@ const themes = {
   dracula: 'dracula',
   cupcake: 'cupcake',
   night: 'night',
+  fantasy:'fantasy',
 };
 
 const getInitialTheme = () => {
@@ -18,7 +19,7 @@ const getInitialTheme = () => {
     return themes.night;
   }
 
-  return themes.cupcake;
+  return themes.fantasy;
 };
 
 const getUserFromLocalStorage = () => {
@@ -46,8 +47,8 @@ const userSlice = createSlice({
       toast.success('Logged out');
     },
     toggleTheme: (state) => {
-      const { cupcake, night } = themes;
-      const newThemeName = state.theme === cupcake ? night : cupcake;
+      const { fantasy, night } = themes;
+      const newThemeName = state.theme === fantasy ? night : fantasy;
       document.documentElement.setAttribute('data-theme', newThemeName);
       localStorage.setItem('theme', newThemeName);
 
