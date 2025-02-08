@@ -6,8 +6,7 @@ import { loginUser } from '../features/user/userSlice';
 import { clearCart } from '../features/cart/cartSlice';
 import { formatPrice } from './helperFuncs';
 
-//const apiUrl = import.meta.env.VITE_API_URL;
-const apiUrl = "https://strapi-store-server.onrender.com/api";
+const apiUrl = import.meta.env.VITE_API_URL;
 
 export const customFetch = axios.create({
   baseURL: apiUrl,
